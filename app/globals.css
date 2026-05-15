@@ -82,3 +82,6 @@ a{color:inherit;text-decoration:none}
 
 /* Fix for inline styles causing build issues */
 code.inline{background:#0d1326;padding:1px 6px;border-radius:3px;font-size:11px}
+
+/* Top action bar */
+.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.filter-group{display:flex;gap:2px;background:#0d1326;border:1px solid #121a33;border-radius:6px;padding:2px}.filter-group .fbtn{font-size:10px;font-weight:500;padding:3px 10px;border:none;border-radius:4px;cursor:pointer;background:transparent;color:#64748b;transition:.1s;white-space:nowrap}.filter-group .fbtn.on,.filter-group .fbtn:hover{background:#1e2a4a;color:#e2e8f0}@media(max-width:768px){.top-actions{gap:4px}.filter-group .fbtn{font-size:9px;padding:2px 7px}}
