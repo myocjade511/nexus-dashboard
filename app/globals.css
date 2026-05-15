@@ -68,3 +68,17 @@ a{color:inherit;text-decoration:none}
 .deploy-strip .d .url{font-size:11px;color:#93c5fd}
 
 @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}.sidebar{width:56px;overflow:hidden}.sidebar .nav a span:not(.ico){display:none}.main{padding:16px}}
+
+/* Quick deploy cards */
+.deploy-strip .d .label-sm{font-size:10px;color:#475569;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+
+/* Footer */
+.footer-note{text-align:center;padding:20px 0 10px;font-size:10px;color:#1e2a4a;letter-spacing:.04em}
+
+/* Project table cell - dim */
+.cell-dim{color:#64748b;font-size:11px}
+.cell-muted{color:#475569}
+.cell-bold{font-weight:600}
+
+/* Fix for inline styles causing build issues */
+code.inline{background:#0d1326;padding:1px 6px;border-radius:3px;font-size:11px}

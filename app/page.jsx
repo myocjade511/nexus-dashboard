@@ -117,10 +117,10 @@ export default function Dashboard() {
           <tbody>
             {projects.map(p => (
               <tr key={p.id}>
-                <td style={{fontWeight:600}}>{p.name}</td>
+                <td className="cell-bold">{p.name}</td>
                 <td><span className={`tag ${p.status}`}>{p.status}</span></td>
-                <td style={{color:'#64748b',fontSize:11}}>{p.url}</td>
-                <td style={{color:'#475569'}}>{p.updated}</td>
+                <td className="cell-dim">{p.url}</td>
+                <td className="cell-muted">{p.updated}</td>
               </tr>
             ))}
           </tbody>
@@ -130,11 +130,11 @@ export default function Dashboard() {
         <div className="section-title">Quick Actions</div>
         <div className="deploy-strip">
           <div className="d">
-            <div style={{fontSize:10,color:'#475569',fontWeight:600,textTransform:'uppercase',letterSpacing:.06em,marginBottom:2}}>kdpbookinaweek</div>
+            <div className="label-sm">kdpbookinaweek</div>
             <div className="url">https://kdpbookinaweek.vercel.app</div>
           </div>
           <div className="d">
-            <div style={{fontSize:10,color:'#475569',fontWeight:600,textTransform:'uppercase',letterSpacing:.06em,marginBottom:2}}>GitHub</div>
+            <div className="label-sm">GitHub</div>
             <div className="url">myocjade511/kdpbookinaweek</div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function Dashboard() {
         </div>
 
         {/* Footer */}
-        <div style={{textAlign:'center',padding:'20px 0 10px',fontSize:10,color:'#1e2a4a',letterSpacing:.04em}}>
+        <div className="footer-note">
           OpenClaw Nexus Dashboard v1.0.0 &middot; {new Date().toISOString().slice(0,10)}
         </div>
       </main>
