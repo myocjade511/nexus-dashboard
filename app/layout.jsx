@@ -1,12 +1,11 @@
-import type { Metadata } from 'next'
 import './globals.css'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Nexus Dashboard',
   description: 'OpenClaw Centralized Operations Dashboard',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
