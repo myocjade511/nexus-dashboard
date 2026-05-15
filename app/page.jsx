@@ -43,10 +43,17 @@ export default function Dashboard() {
   const [projectSort, setProjectSort] = useState('name')
   const [view, setView] = useState('grid')
   const [logFilter, setLogFilter] = useState('all')
+  const [settings, setSettings] = useState({ stripe_pk: null, stripe_secret: null })
 
   useEffect(() => {
     const t = new Date()
     setTime(t.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' }))
+  }, [])
+
+  useEffect(() => {
+    fetch('/api/settings').then(r => r.json()).then(d => {
+      setSettings({ stripe_pk: d.stripe_publishable_key, stripe_secret: d.stripe_secret })
+    }).catch(() => {})
   }, [])
 
   const filteredAgents = AGENTS.filter(a => agentFilter === 'all' || a.status === agentFilter)
@@ -251,7 +258,8 @@ export default function Dashboard() {
         {section === 'settings' && (
           <>
             <div className="deploy-strip" style={{flexDirection:'column',alignItems:'stretch'}}>
-              <div className="d"><div className="label-sm">Stripe Key</div><div className="url" style={{color:'#ef4444'}}>Expired \u2014 needs update</div></div>
+              <div className="d"><div className="label-sm">Stripe Publishable Key</div><div className="url" style={{color:settings.stripe_pk ? '#22c55e' : '#ef4444'}}>{settings.stripe_pk || 'Loading...'}</div></div>
+              <div className="d"><div className="label-sm">Stripe Secret</div><div className="url" style={{color:settings.stripe_secret ? '#22c55e' : '#a8a29e'}}>{settings.stripe_secret || 'Not configured'}</div></div>
               <div className="d"><div className="label-sm">ElevenLabs Key</div><div className="url" style={{color:'#a8a29e'}}>Not configured</div></div>
               <div className="d"><div className="label-sm">GitHub</div><div className="url">myocjade511</div></div>
               <div className="d"><div className="label-sm">Vercel</div><div className="url">Team connected</div></div>

@@ -1,0 +1,23 @@
+[
+  {
+    "tier": "Basic",
+    "product_id": "prod_UWQxmPmuwZ6V86",
+    "price_id": "price_1TXO60GUDBzSXfRHrSbcw6Rz",
+    "amount": 150000,
+    "stripe_url": "https://dashboard.stripe.com/test/products/prod_UWQxmPmuwZ6V86"
+  },
+  {
+    "tier": "Premium",
+    "product_id": "prod_UWQxJkVV472aFW",
+    "price_id": "price_1TXO60GUDBzSXfRHgohHbAeD",
+    "amount": 250000,
+    "stripe_url": "https://dashboard.stripe.com/test/products/prod_UWQxJkVV472aFW"
+  },
+  {
+    "tier": "Elite",
+    "product_id": "prod_UWQx2XWtEs7mMV",
+    "price_id": "price_1TXO61GUDBzSXfRH50lPGKGL",
+    "amount": 400000,
+    "stripe_url": "https://dashboard.stripe.com/test/products/prod_UWQx2XWtEs7mMV"
+  }
+]
